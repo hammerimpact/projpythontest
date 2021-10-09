@@ -6,7 +6,7 @@ root = Tk()
 root.title("test file dialog")
 
 def open() :
-    fileName = filedialog.askopenfilename(initialdir="./test_tkinter/testfiledialog/images", title="test", filetypes=(("jpg files", "*.jpg"), ("png files", "*.png"), ("all", "*.*")))
+    fileName = filedialog.askopenfilename(initialdir="./images", title="test", filetypes=(("jpg files", "*.jpg"), ("png files", "*.png"), ("all", "*.*")))
     global imgFile
     imgFile = ImageTk.PhotoImage(image=Image.open(fileName))
     lblImg = Label(root, image=imgFile)

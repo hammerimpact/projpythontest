@@ -29,7 +29,7 @@ pAppSetting = AppSetting()
 
 
 def Init():
-    for r,d,f in os.walk("./test_tkinter/imageviewer/images"):
+    for r,d,f in os.walk("./images"):
         for filename in f:
             if '.jpg' in filename or '.png' in filename :
                 pAppSetting.lstFilePaths.append(os.path.join(r, filename))
@@ -103,7 +103,7 @@ def main():
     
     root = Tk()
     root.title("image viewer test")
-    root.iconbitmap("./test_tkinter/imageviewer/examp_ico.ico")
+    root.iconbitmap("./examp_ico.ico")
     root.geometry(f"{pAppSetting.width}x{pAppSetting.height}")
 
     InitUI_Buttons(root)
